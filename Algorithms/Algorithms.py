@@ -1,5 +1,7 @@
 
 class recursiveformulas:
+    def __init__(Self):
+         Self
     def recursivesum(N):
             if N==1:
                 return 1
@@ -47,7 +49,7 @@ class recursiveformulas:
 
     def binary(array, item, left, right):
         if right<left:
-            return -1;
+            return -1
         middle= left+(right-left)//2
         print("middle index: %s"%(middle))
 
@@ -63,7 +65,8 @@ class recursiveformulas:
             return recursiveformulas.binary(array, item, middle+1, right)
 
     
-if __name__ == "__main__":
-    #re=recursivesum(2)
-    print(recursiveformulas.binary([1,4,5,6,7,8,9,10,11], 11, 0, 7))
+if __name__ == "__main__":    
+    re= recursiveformulas.recursivesum(2)
+    print(re)
+    #print(recursiveformulas.binary([1,4,5,6,7,8,9,10,11], 11, 0, 7))
 
