@@ -1,7 +1,11 @@
 
 class recursiveformulas:
-    def __init__(Self):
-         Self
+    def __init__(Self,name,age):
+         Self.name=name
+         Self.age=age
+    def printparameter(self):
+        print(self.name,self.age)
+
     def recursivesum(N):
             if N==1:
                 return 1
@@ -65,8 +69,10 @@ class recursiveformulas:
             return recursiveformulas.binary(array, item, middle+1, right)
 
     
-if __name__ == "__main__":    
-    re= recursiveformulas.recursivesum(2)
-    print(re)
+if __name__ == "__main__": 
+    #ll=recursiveformulas(name="Pedro",age=10)
+    #ll.printparameter()
+    #re= recursiveformulas.recursivesum(2)
+    #print(re)
     #print(recursiveformulas.binary([1,4,5,6,7,8,9,10,11], 11, 0, 7))
 
