@@ -1,8 +1,8 @@
-
 class recursiveformulas:
     def __init__(Self,name,age):
          Self.name=name
          Self.age=age
+
     def printparameter(self):
         print(self.name,self.age)
 
@@ -67,12 +67,47 @@ class recursiveformulas:
         elif array[middle]<item:
             print("Checking items on the right...")
             return recursiveformulas.binary(array, item, middle+1, right)
-
     
-if __name__ == "__main__": 
-    #ll=recursiveformulas(name="Pedro",age=10)
-    #ll.printparameter()
-    #re= recursiveformulas.recursivesum(2)
-    #print(re)
-    #print(recursiveformulas.binary([1,4,5,6,7,8,9,10,11], 11, 0, 7))
 
+
+class algo_sort:
+    def __init__(self, array1=[]):
+        self.array1 = array1
+
+    def sortinsertasc(self):
+        A = self.array1[:]  # Create a copy of the list
+        if len(A) <= 1:
+            return A
+        else:
+            for i in range(1, len(A)):
+                key = A[i]
+                j = i - 1
+                while j >= 0 and key < A[j]:
+                    A[j + 1] = A[j]
+                    j -= 1
+                A[j + 1] = key
+            return A
+
+    def sortinsertdsc(self):
+        B = self.array1[:]  # Create a copy of the list
+        if len(B) <= 1:
+            return B
+        else:
+            for i in range(1, len(B)):
+                key = B[i]
+                j = i - 1
+                while j >= 0 and key > B[j]:
+                    B[j + 1] = B[j]
+                    j -= 1
+                B[j + 1] = key
+            return B
+
+if __name__ == "__main__": 
+    algo_sort_instance = algo_sort([5, 2, 9, 1, 5, 6])
+    print("Initial array:", algo_sort_instance.array1)  # Debugging
+
+    sorted_array_asc = algo_sort_instance.sortinsertasc()
+    print("Sorted array in ascending order:", sorted_array_asc)
+
+    sorted_array_dsc = algo_sort_instance.sortinsertdsc()
+    print("Sorted array in descending order:", sorted_array_dsc)
