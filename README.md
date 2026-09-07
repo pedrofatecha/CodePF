@@ -12,4 +12,4 @@ in the following languages:
 * Python 3.8
 * R
 * SQL
-* Typescript
+* C++
